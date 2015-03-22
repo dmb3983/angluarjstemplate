@@ -1,0 +1,12 @@
+<div class="focus-input">
+    <input type="text" name="{{ inputId }}"
+           ng-model="ctrl.title"
+           ng-model-options="{getterSetter : true}"
+           ng-show="ctrl.showInput"
+           ng-blur="ctrl.hideEditInput($event)"
+           focus-input-on="{{ctrl.showInput}}">
+
+    <span class="title" ng-click="ctrl.showEditInput($event)" ng-hide="ctrl.showInput">
+        {{ctrl.title}}
+    </span>
+</div>
